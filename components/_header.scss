@@ -1,0 +1,213 @@
+.header_top {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background: $clr-primary-g;
+    &_wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 4rem 2rem;
+        margin: 0 auto;
+    }
+    .menu_button {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        z-index: 1;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        span {
+            height: 3px;
+            width: 3rem;
+            border-radius: 5rem;
+            display: block;
+            background: $clr-light;
+            transition: 0.2s ease-in-out;
+        }
+        &.active {
+            transform: rotate(180deg) translateX(0.5rem);
+            span {
+                &:first-child {
+                    transform: rotate(45deg) translate(0.4rem, 1.1rem);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:last-child {
+                    transform: rotate(-45deg) translate(0.4rem, -1.1rem);
+                }
+            }
+        }
+    }
+    .header_top_socials, .location {   
+        display: none;
+    }
+    .branding {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        img {
+            width: 25rem;
+        }
+    }
+    @include mediaQuery($desktop) {
+        position: relative;
+        &_wrapper {
+            padding: 0;
+            justify-content: space-between;
+        }
+        .menu_button {
+            display: none;
+        }
+        .header_top_socials, .location {   
+            display: flex;
+        }
+        .location {
+            i {
+                font-size: 3rem;
+                color: $clr-primary-y;
+            }
+            p {
+                font-size: $p;
+                color: $clr-light;
+            }
+        }
+        .header_top_socials {
+            ul {
+                gap: 3rem;
+                li {
+                    a {
+                        font-size: 2rem;
+                        color: $clr-light;
+                        transition: 0.3s ease-in-out;
+                        &:hover {
+                            color: $clr-primary-y;
+                        }
+                    }
+                }
+            }
+        }
+        .branding {
+            position: static;
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+            img {
+                width: 43rem;
+            }
+        }
+    }
+}
+
+.header_top_socials ul, .location {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: $bold;
+}
+
+.header_bottom {
+    position: fixed;
+    top: 10.5rem;
+    width: 100%;
+    left: -100%;
+    z-index: 999;
+    height: 100vh;
+    padding: 4rem 0 12rem 0;
+    transition: 0.3s ease-in-out;
+    overflow: scroll;
+    background: $clr-bg;   
+    &.active {
+        left: 0;
+    }
+    &_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+    .location {
+        p {
+            font-size: 2.4rem;
+        }
+        i {
+            color: $clr-primary-g;
+            font-size: 3rem;
+        }
+    }
+    .header_top_socials ul{
+        font-size: 2.4rem;
+        gap: 4rem;
+    }
+    .separator {
+        height: 3px;
+        width: 90%;
+        display: block;
+        background: $clr-primary-g;
+    }
+    .header_nav {
+        width: 90%;
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            li {
+                span {
+                    display: none;
+                }
+                a {
+                    font-size: $p;
+                    font-weight: $bold;
+                }
+            }
+        }
+    }
+    @include mediaQuery($desktop) {
+        position: sticky;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 10px 1px;
+        top: 0;
+        left: 0;
+        height: max-content;
+        padding: 0;
+        overflow: hidden;
+        &_wrapper {
+            height: max-content;
+            padding: 1.75rem 0;
+        }
+        .mobile_view, .separator {
+            display: none;
+        }
+        .header_nav {
+            width: max-content;
+            ul {
+                flex-direction: row;
+                gap: 23.5rem;
+                li {
+                    span {
+                        align-self: center;
+                        display: flex;
+                        height: 2px;
+                        width: 0%;
+                        transition: 0.3s ease-in-out;
+                        background: $clr-primary-g;
+                    }
+                    a {
+                        font-size: 2rem;
+                        transition: 0.3s ease-in-out;
+                        font-weight: $medium;
+                    }
+                    &:hover {
+                        span {
+                            width: 100%;
+                        }
+                        a {
+                            color: $clr-primary-g;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

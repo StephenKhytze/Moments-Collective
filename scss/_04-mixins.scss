@@ -1,0 +1,22 @@
+@mixin mediaQuery($width: 460px) {
+  @media screen and (min-width: $width) {
+    @content; 
+  }
+}
+@mixin gridEven($cols: 1, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  grid-gap: $gap;
+}
+
+@mixin gridUneven($cols, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: $cols;
+  grid-gap: $gap;
+}
+
+@mixin centerAll() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
