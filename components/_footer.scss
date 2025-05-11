@@ -113,6 +113,16 @@
             h5 {
                 font-size: $h5;
             }
+            ul {
+                li {
+                    a {
+                        transition: 0.3s ease-in-out;
+                        &:hover {
+                            color: $clr-primary-y;
+                        }
+                    }
+                }
+            }
         }
         &_contacts {
             margin: 0;

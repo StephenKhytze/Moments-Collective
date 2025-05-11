@@ -155,6 +155,12 @@ body {
   .footer_contacts h5, .footer_nav h5 {
     font-size: 3.6rem;
   }
+  .footer_contacts ul li a, .footer_nav ul li a {
+    transition: 0.3s ease-in-out;
+  }
+  .footer_contacts ul li a:hover, .footer_nav ul li a:hover {
+    color: #C6A622;
+  }
   .footer_contacts {
     margin: 0;
   }
@@ -253,7 +259,7 @@ body {
     position: static;
     top: 0;
     left: 0;
-    transform: translate(0, 0);
+    transform: translate(-15%, 0);
   }
   .header_top .branding img {
     width: 43rem;
