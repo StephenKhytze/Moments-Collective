@@ -1,0 +1,129 @@
+.banner {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-top: 10.5rem;
+    width: 100%;
+    background: $clr-green;
+    &.home {
+        height: 100vh;
+    }
+    .desktop {
+        display: none;
+    }
+    .wave_lines {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        padding: 12.5rem 0 2rem 0;
+        z-index: 4;
+        justify-content: space-between;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            width: 200%;
+        }
+    }
+    .cameras {
+        position: absolute;
+        bottom: -1rem;
+        right: -70%;
+        img {
+            opacity: 25%;
+            width: 70%;
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+    &_text {
+        position: relative;
+        z-index: 5;
+        max-width: 90%;
+        margin: 0 auto;
+        &_header {
+            h1 {
+            color: $clr-primary-y;
+            font-size: $h3;
+            font-family: $ff-bold;
+            font-weight: $regular;
+            span {
+                line-height: 1rem;
+                font-size: 7.6rem;
+                font-family: $ff-cursive;
+            }
+        }
+        }
+        &_content {
+            p {
+                display: none;
+            }
+        }
+    }
+    @include mediaQuery($desktop) {
+        padding: 0;
+        justify-content: center;
+        .desktop {
+            display: flex;
+        }
+        .mobile {
+            display: none;
+        }
+        .wave_lines {
+            padding: 3rem 0;
+        }
+        &.home {
+            height: 80vh;
+        }
+        .cameras {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            top: 50%;
+            left: 50%;
+            bottom: 0;
+            right: 0;
+            z-index: 5;
+            width: 166rem;
+            transform: translate(-50%, -50%);
+            height: max-content;
+            img {
+                opacity: 100%;
+                &:first-child {
+                    width: 52rem;
+                }
+                &:last-child {
+                    width: 57rem;
+                    display: block;
+            }
+            }
+        }
+        &_text {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            max-width: 68rem;
+            &_header {
+                h1 {
+                    span {
+                        font-size: 9.6rem;
+                    }
+                }
+            }
+            &_content {
+                p {
+                    display: flex;
+                    text-align: justify;
+                    line-height: 3rem;
+                    font-size: $p;
+                    font-weight: $regular;
+                    color: $clr-light;
+                }
+            }
+        }
+    }
+}
