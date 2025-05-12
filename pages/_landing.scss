@@ -4,10 +4,33 @@
     display: flex;
     align-items: center;
     padding-top: 10.5rem;
+    height: 40rem;
     width: 100%;
     background: $clr-green;
     &.home {
         height: 100vh;
+        .cameras {
+            display: flex;
+            position: absolute;
+            bottom: -1rem;
+            right: -70%;
+            img {
+                opacity: 25%;
+                width: 70%;
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
+        .banner_text {
+            h1 {
+                text-align: left;
+                font-size: $h3;
+            }
+        }
+        .wave_lines {
+            padding: 12.5rem 0 2rem 0;
+        }
     }
     .desktop {
         display: none;
@@ -16,8 +39,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        height: 100%;
-        padding: 12.5rem 0 2rem 0;
+        height: 105%;
+        padding: 10.5rem 0 0rem 0;
         z-index: 4;
         justify-content: space-between;
         position: absolute;
@@ -29,16 +52,7 @@
         }
     }
     .cameras {
-        position: absolute;
-        bottom: -1rem;
-        right: -70%;
-        img {
-            opacity: 25%;
-            width: 70%;
-            &:last-child {
-                display: none;
-            }
-        }
+        display: none;
     }
     &_text {
         position: relative;
@@ -48,9 +62,10 @@
         &_header {
             h1 {
             color: $clr-primary-y;
-            font-size: $h3;
+            font-size: $h4;
             font-family: $ff-bold;
             font-weight: $regular;
+            text-align: center;
             span {
                 line-height: 1rem;
                 font-size: 7.6rem;

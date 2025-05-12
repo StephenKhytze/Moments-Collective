@@ -45,11 +45,32 @@ body {
   display: flex;
   align-items: center;
   padding-top: 10.5rem;
+  height: 40rem;
   width: 100%;
   background: #00341D;
 }
 .banner.home {
   height: 100vh;
+}
+.banner.home .cameras {
+  display: flex;
+  position: absolute;
+  bottom: -1rem;
+  right: -70%;
+}
+.banner.home .cameras img {
+  opacity: 25%;
+  width: 70%;
+}
+.banner.home .cameras img:last-child {
+  display: none;
+}
+.banner.home .banner_text h1 {
+  text-align: left;
+  font-size: 4.8rem;
+}
+.banner.home .wave_lines {
+  padding: 12.5rem 0 2rem 0;
 }
 .banner .desktop {
   display: none;
@@ -58,8 +79,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 100%;
-  padding: 12.5rem 0 2rem 0;
+  height: 105%;
+  padding: 10.5rem 0 0rem 0;
   z-index: 4;
   justify-content: space-between;
   position: absolute;
@@ -71,15 +92,6 @@ body {
   width: 200%;
 }
 .banner .cameras {
-  position: absolute;
-  bottom: -1rem;
-  right: -70%;
-}
-.banner .cameras img {
-  opacity: 25%;
-  width: 70%;
-}
-.banner .cameras img:last-child {
   display: none;
 }
 .banner_text {
@@ -90,9 +102,10 @@ body {
 }
 .banner_text_header h1 {
   color: #C6A622;
-  font-size: 4.8rem;
+  font-size: 4rem;
   font-family: "Alfa Slab One", serif;
   font-weight: 400;
+  text-align: center;
 }
 .banner_text_header h1 span {
   line-height: 1rem;
