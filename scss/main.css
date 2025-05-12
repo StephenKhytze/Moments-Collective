@@ -132,6 +132,22 @@ body {
   .banner.home {
     height: 80vh;
   }
+  .banner.home .banner_text {
+    max-width: 68rem;
+  }
+  .banner.home .banner_text_header h1 span {
+    font-size: 9.6rem;
+  }
+  .banner.home .cameras img {
+    opacity: 100%;
+  }
+  .banner.home .cameras img:first-child {
+    width: 54rem;
+  }
+  .banner.home .cameras img:last-child {
+    width: 57rem;
+    display: block;
+  }
   .banner .cameras {
     position: absolute;
     display: flex;
@@ -148,22 +164,24 @@ body {
   }
   .banner .cameras img {
     opacity: 100%;
+    height: -moz-max-content;
+    height: max-content;
   }
   .banner .cameras img:first-child {
-    width: 52rem;
+    width: 33rem;
   }
   .banner .cameras img:last-child {
-    width: 57rem;
+    width: 35rem;
     display: block;
   }
   .banner_text {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    max-width: 68rem;
+    max-width: 80rem;
   }
-  .banner_text_header h1 span {
-    font-size: 9.6rem;
+  .banner_text_header h1 {
+    font-size: 6.4rem;
   }
   .banner_text_content p {
     display: flex;

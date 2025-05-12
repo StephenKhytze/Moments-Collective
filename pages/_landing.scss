@@ -93,6 +93,28 @@
         }
         &.home {
             height: 80vh;
+            .banner_text {
+                max-width: 68rem;
+                &_header {
+                    h1 {
+                        span {
+                            font-size: 9.6rem;
+                        }
+                    }   
+                }
+            }
+            .cameras {
+                img {
+                    opacity: 100%;
+                    &:first-child {
+                        width: 54rem;
+                    }
+                    &:last-child {
+                        width: 57rem;
+                        display: block;
+                    }
+                }
+            }
         }
         .cameras {
             position: absolute;
@@ -108,25 +130,24 @@
             height: max-content;
             img {
                 opacity: 100%;
-                &:first-child {
-                    width: 52rem;
+                height: max-content;
+                &:first-child { 
+                    width: 33rem;
                 }
                 &:last-child {
-                    width: 57rem;
+                    width: 35rem;
                     display: block;
-            }
+                }
             }
         }
         &_text {
             display: flex;
             flex-direction: column;
             gap: 3rem;
-            max-width: 68rem;
+            max-width: 80rem;
             &_header {
                 h1 {
-                    span {
-                        font-size: 9.6rem;
-                    }
+                    font-size: $h1;
                 }
             }
             &_content {
