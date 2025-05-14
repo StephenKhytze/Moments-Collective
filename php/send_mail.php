@@ -8,13 +8,7 @@ require '../PHPMailer/src/SMTP.php';
 $mail = new PHPMailer(true);
 
 try {
-    $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com';
-    $mail->SMTPAuth   = true;
-    $mail->Username   = 'angelourmatan.junior@gmail.com'; // Moments Collective own email
-    $mail->Password   = 'zsvz wrpm cwdp aavm';
-    $mail->SMTPSecure = 'tls';
-    $mail->Port       = 587;
+
 
     $mail->setFrom('angelourmatan.junior@gmail.com', 'Moments Collective'); // Sender email
     $mail->addAddress('stephen092madula@gmail.com') // Email destination
