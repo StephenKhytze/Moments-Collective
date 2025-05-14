@@ -1,3 +1,7 @@
+body {
+    background: $clr-bg;
+}
+
 .banner {
     position: relative;
     overflow: hidden;
@@ -160,6 +164,273 @@
                     color: $clr-light;
                 }
             }
+        }
+    }
+}
+
+.packages {
+    margin: 8rem 0;
+    &_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        h6 {
+            max-width: 35rem;
+            text-align: center;
+            font-weight: $regular;
+            font-size: $p;
+        }
+    }
+    &_header {
+        h2 {
+            font-weight: $bold;
+            font-size: $h4;
+            text-align: center;
+        }
+    }
+    &_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+    &_offered {
+        position: relative;
+        background: $clr-primary-g;
+        padding: 4rem 0;
+        max-width: 35rem;
+        border-radius: 1rem;
+        box-shadow: rgba($color: #000000, $alpha: 0.5) 0 4px 16px 2px;
+        overflow: hidden;
+        &:first-child {
+            .packages_offered_content {
+                h4 {
+                    color: #CD7F32;
+                }
+            }
+        }
+        &:nth-child(2) {
+            .packages_offered_content {
+                h4 {
+                    color: #C0C0C0;
+                }
+            }
+        }
+        &:last-child {
+            .packages_offered_content {
+                h4 {
+                    color: #FFD700;
+                }
+            }
+        }
+        &:first-child, &:nth-child(2), &:last-child {
+            .booking_button {
+                h4 {
+                    color: $clr-light;
+                }
+            }
+        }
+        &_content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            z-index: 100;
+        }
+        h4 {
+            text-align: center;
+            font-weight: 900;
+            font-size: $h5;
+        }
+        .separator {
+            height: 3px;
+            width: 85%;
+            display: block;
+            background: $clr-primary-y;
+        }
+        ul {
+            margin-left: 2.5rem;
+            max-width: 80%;
+            li {
+                font-size: $p;
+                list-style: disc;
+                display: list-item;
+                color: $clr-light;
+                line-height: 4.8rem;
+            }
+        }
+        .booking_button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            h4 {
+                color: $clr-light;
+            }
+            a {                
+                i {
+                    color: $clr-primary-y;
+                    transition: 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+    &_background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        img {
+            position: absolute;
+            width: 175%;
+            &:first-child {
+                bottom: 56.5%;
+                transform: scaleX(-1);
+            }
+            &:last-child {
+                top: 56.5%;
+                right: 0;
+                transform: scaleY(-1);
+            }
+        }
+    }
+    @include mediaQuery($desktop) {
+        &_wrapper {
+            h6 {
+                max-width: 166rem;
+            }
+        }
+        &_header {
+            h2 {
+                font-size: $h4;
+            }
+        }
+        &_content {
+            width: 166rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &_offered {
+            max-width: 64rem;
+            h4 {
+                font-size: $h4;
+                align-self: flex-start;
+                margin-left: 3rem;
+            }
+            ul {
+                max-width: 85%;
+                margin-left: 2rem;
+            }
+            .booking_button {
+                width: 85%;
+                flex-direction: row;
+                justify-content: space-between;
+                h4 {
+                    align-self: center;
+                    margin-left: 0;
+                }
+                a {
+                    padding: 1rem 3rem;
+                    font-size: $p;
+                    &:hover {
+                        color: $clr-primary-g;
+                        i {
+                            color: $clr-primary-g;
+                        }
+                        &::after {
+                            width: 101%;
+                        }
+                    }
+                }
+            }
+        }
+        &_background {
+            height: 100%;
+            img {
+                position: relative;
+                width: 125%;
+                &:first-child {
+                    position: absolute;
+                    bottom: 40.5%;
+                    left: 10rem;
+                }
+                &:last-child {
+                    position: absolute;
+                    top: 40%;
+                    right: 10rem;
+                }
+            }
+        }
+    }
+}
+
+.contacts {
+    &_wrapper {
+        margin: 0 auto;
+        max-width: 35rem;
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
+    }
+    &_header {
+        text-align: center;
+        h2 {
+            font-size: $h4;
+        }
+        h3 {
+            font-size: $p;
+        }
+    }
+    &_socials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        &_content {
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 4rem;
+                    &:first-child {
+                        i {
+                            padding: 0 0.5rem;
+                        }
+                    }
+                    a {
+                        font-size: 2.2rem;
+                    }
+                    i {
+                        font-size: 3.6rem;
+                        color: $clr-primary-y;
+                    }
+                }
+            }
+        }
+    }
+    .separator {
+        position: relative;
+        span {
+            height: 2px;
+            width: 100%;
+            display: block;
+            background: #AAAAAA;
+        }
+        p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 0 2rem;
+            background: $clr-bg;
+            font-size: $p;
+            color: #AAAAAA;
         }
     }
 }

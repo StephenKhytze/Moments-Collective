@@ -1,0 +1,38 @@
+.btn {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 1rem;
+    border: 5px solid $clr-primary-y;
+    border-radius: 5rem;
+    padding: 1rem 4.5rem;
+    font-size: $h6;
+    font-weight: $bold;
+    color: $clr-light;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 101%;
+        height: 101%;
+        background: $clr-primary-g;
+        z-index: -2;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 101%;
+        background: $clr-primary-y;
+        z-index: -1;
+        transition: 0.3s ease-in-out;
+    }
+}

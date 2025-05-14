@@ -99,15 +99,16 @@
         </div>
         <div class="packages_content">
           <div class="packages_offered">
-            <div class="package_background">
-              <img src="" alt="">
-              <img src="" alt="">
+            <div class="packages_background">
+              <img src="../img/gold-curve.png" alt="">
+              <img src="../img/gold-curve.png" alt="">
             </div>
+            <div class="packages_offered_content">
             <h4>BRONZE PACKAGE</h4>
             <span class="separator"></span>
             <ul>
               <li>2 hours unlimited photo and print session</li>
-              <li>4R photo print only</li>
+              <li>4R photo print only (no standees included)</li>
               <li>Free backdrop</li>
               <li>Free customized template</li>
               <li>Free welcome screen</li>
@@ -117,9 +118,121 @@
             <span class="separator"></span>
             <div class="booking_button">
               <h4>₱ 7,000.00</h4>
-              <a href="#">Book Now<i class="fa-solid fa-circle-chevron-right"></i></a>
+              <a class="btn" href="#">Book Now<i class="fa-solid fa-circle-chevron-right"></i></a>
+            </div>
             </div>
           </div>
+          <div class="packages_offered">
+            <div class="packages_background">
+              <img src="../img/gold-curve.png" alt="">
+              <img src="../img/gold-curve.png" alt="">
+            </div>
+            <div class="packages_offered_content">
+            <h4>SILVER PACKAGE</h4>
+            <span class="separator"></span>
+            <ul>
+              <li>2 hours unlimited photo and print session</li>
+              <li>4R photo print with photo standee</li>
+              <li>Free backdrop</li>
+              <li>Free customized template</li>
+              <li>Free welcome screen</li>
+              <li>Use of props</li>
+              <li>Booth attendants</li>
+            </ul>
+            <span class="separator"></span>
+            <div class="booking_button">
+              <h4>₱ 7,500.00</h4>
+              <a class="btn" href="#">Book Now<i class="fa-solid fa-circle-chevron-right"></i></a>
+            </div>
+            </div>
+          </div>
+          <div class="packages_offered">
+            <div class="packages_background">
+              <img src="../img/gold-curve.png" alt="">
+              <img src="../img/gold-curve.png" alt="">
+            </div>
+            <div class="packages_offered_content">
+            <h4>GOLD PACKAGE</h4>
+            <span class="separator"></span>
+            <ul>
+              <li>2 hours unlimited photo and print session</li>
+              <li>4R photo print with magnetic photo</li>
+              <li>Free backdrop</li>
+              <li>Free customized template</li>
+              <li>Free welcome screen</li>
+              <li>Use of props</li>
+              <li>Booth attendants</li>
+            </ul>
+            <span class="separator"></span>
+            <div class="booking_button">
+              <h4>₱ 8,500.00</h4>
+              <a class="btn" href="#">Book Now<i class="fa-solid fa-circle-chevron-right"></i></a>
+            </div>
+            </div>
+          </div>
+        </div>
+        <h6>*All 3 packages are inclusive of soft-copy photos via Google Drive and Facebook album on our Facebook page</h6>
+      </div>
+    </div>
+  </section>
+  <section class="contacts">
+    <div class="container">
+      <div class="contacts_wrapper">
+        <div class="contacts_socials">
+          <div class="contacts_header">
+            <h2>CONTACT US</h2>
+            <h3>Book your event with us!</h3>
+          </div>
+          <div class="contacts_socials_content">
+            <ul>
+              <li><i class="fa-brands fa-facebook-f"></i><a href="#">Moments Collective</a></li>
+              <li><i class="fa-solid fa-envelope"></i><a href="#">inquiries.momentscollective<br>@gmail.com</a></li>
+              <li><i class="fa-solid fa-phone-flip"></i><a href="#">0993-958-8429</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="separator">
+          <span></span>
+          <p>or</p>
+        </div>
+        <div class="contacts_email">
+          <form action="../php/send_mail.php" method="POST" enctype="multipart/form-data">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required />
+              </div>
+              <div class="form-group">
+                <label for="contact">Contact Number (Optional)</label>
+                <input type="tel" name="contact" id="contact" placeholder="+63 (099) 888-7766" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" name="email" id="email" placeholder="example@email.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" name="subject" id="subject" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="attachment" class="file-label">Attachments (Optional)</label>
+              <input type="file" name="attachment" id="attachment" />
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="submit-btn">Submit</button>
+              <button type="reset" class="reset-btn">Reset</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
